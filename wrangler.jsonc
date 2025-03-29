@@ -1,0 +1,22 @@
+{
+	// Nombre único para tu worker (¡¡CAMBIA ESTO!!)
+	"name": "chat-pixa-backend-1984",
+  
+	// Punto de entrada (verifica si es worker.js o index.js en tu carpeta src)
+	"main": "src/worker.js",
+  
+	// Fecha de compatibilidad (usa la sugerida o una reciente)
+	"compatibility_date": "2023-11-21",
+  
+	// Configuración de Durable Objects
+	"durable_objects": {
+	  "bindings": [
+		{ "name": "CHAT_ROOM", "class_name": "ChatRoom" }
+	  ]
+	},
+  
+	// Migración inicial
+	"migrations": [
+	  { "tag": "v1", "new_classes": ["ChatRoom"] }
+	]
+  }
